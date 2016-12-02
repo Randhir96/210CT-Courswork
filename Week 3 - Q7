@@ -1,4 +1,4 @@
-def checkPrimeNumber(n, div = None):
+def checkPrimeNumber(n, div = None): # function defined, takes two arguments.
     if div is None:
         div = n-1
     while div >=2:
@@ -10,5 +10,5 @@ def checkPrimeNumber(n, div = None):
         return True
             
 if __name__ == "__main__":
-    for i in range(1,23):
+    for i in range(1,23): # tests for every number between 1 and 23.
         print( "{} = {}".format(i,checkPrimeNumber(i)))
