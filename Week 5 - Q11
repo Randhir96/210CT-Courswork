@@ -25,8 +25,8 @@ class List(object):
         elif self.tail==n:
               self.tail=x
 
-    def nodeDelete(L,N):
-        if N.prev != None:
+    def nodeDelete(L,N): # node delete function implementation.
+        if N.prev != None: 
             N.prev.next = N.next
         else:
             L.head = N.next
@@ -48,5 +48,5 @@ if __name__ == '__main__':
       l.insert(None, Node(4))
       l.insert(l.head,Node(6))
       l.insert(l.head,Node(8))
-      l.nodeDelete(l.head)
+      l.nodeDelete(l.head) # deletes node.
       l.display()
