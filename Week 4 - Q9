@@ -1,0 +1,23 @@
+def binarySearch(List, interval1, interval2): # function name defined
+    firstNumber = 0 # first number in list
+    lastNumber = len(List)-1 # last name in list
+    numberFound = False 
+
+    while firstNumber <= lastNumber and not numberFound:
+        middleNumber = (firstNumber + lastNumber) // 2
+        if List[middleNumber] > interval1 and List[middleNumber] < interval2:
+            print("Number Found")
+            numberFound = True # return true if number found.
+
+        else:
+            if interval1 < List[middleNumber]: 
+                lastNumber = middleNumber - 1
+            else:
+                firstNumber = middleNumber + 1
+
+    return numberFound #return false if number not found.
+
+print("Number does not exist")
+
+
+print(binarySearch([2,3,5,7,9,13],10,14))
