@@ -1,0 +1,12 @@
+import random # random module is imported.
+
+def randomList(List): # function name defined.
+    result = [] # If no numbers in list, output empty list.
+
+    while len(List) > 0: # While list is greater than "0".
+        num = random.randrange(len(List)) # Rearange the integers within the list.
+        result.append(List.pop(num)) # Takes list from input, appends to result.
+
+    return result # causes function to exit, returns new appended list.
+
+print (randomList([1,5,6,3,7,3]))
