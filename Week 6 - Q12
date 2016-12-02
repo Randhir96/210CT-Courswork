@@ -31,25 +31,25 @@ def postorder(tree):
     print (tree.value)
  
  
-def in_order(tree):
+def in_order(tree): # in oder function, itteration used.
     currentNode = tree
     newList = []
     state = 0
 
-    while currentNode != None:
+    while currentNode != None: # execute while loop as long as currentNode is not = None.
         newList.append(currentNode)
         currentNode = currentNode.left
 
-        if len(newList) == 0:
+        if len(newList) == 0: # base case
             return
-        currentNode = newList.pop()
-        print(currentNode.value)
+        currentNode = newList.pop() 
+        print(currentNode.value) # prints current value.
 
         while currentNode.right == None and len(newList) != 0:
             currentNode = newList.pop()
             print(currentNode.value)
 
-        currentNode = currentNode.right
+        currentNode = currentNode.right # assign node to right branch
                   
 if __name__ == '__main__':
    
