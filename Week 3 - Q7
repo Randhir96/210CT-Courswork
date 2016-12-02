@@ -1,0 +1,14 @@
+def checkPrimeNumber(n, div = None):
+    if div is None:
+        div = n-1
+    while div >=2:
+        if n % div == 0:
+            return False
+        else:
+            return checkPrimeNumber(n, div-1)
+    else:
+        return True
+            
+if __name__ == "__main__":
+    for i in range(1,23):
+        print( "{} = {}".format(i,checkPrimeNumber(i)))
