@@ -1,0 +1,11 @@
+def removeVowels(text): 
+    vowelLetters = ["e","a","u","i"] # array containing vowels.
+    nonVowels = [] # empty array to store non vowels letters.
+
+    for i in text: # for loop itterates through the word beautiful.
+        if i.lower() not in vowelLetters: # if non vowel letter not in vowel array.
+            nonVowels.append(i) # append non vowel to empty array
+
+    return  "".join(nonVowels) # return non vowels.
+
+print(removeVowels("beautiful")) # print function.
