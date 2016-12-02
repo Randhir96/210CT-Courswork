@@ -1,12 +1,12 @@
-import math
+import math # imports the mathematics module for python.
 
-def highestPerfectSquare(n):
-    if n >= 0:
+def highestPerfectSquare(n): #function allows user to input an integer as argument.
+    if n >= 0: # if n is greater than or equal to 0 the function will run.
         
-        number = math.sqrt(n)
-        number = int(number)
-        print(number)
+        number = math.sqrt(n) # square roots number.
+        number = int(number) # converts to integer.
+        print(number) 
     else:
-        return False
+        return False # return false when a number is below 0.
 
-print(perfectSquare(12))
+print(perfectSquare(12)) # prints function.
