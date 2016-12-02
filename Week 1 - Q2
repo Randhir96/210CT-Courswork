@@ -1,12 +1,12 @@
-def trailingZeros(n): # Variable name defined.
+def trailingZeros(n): # function defined, allows user to imput integer.
     fives = 0
     for number in range(2, n+1): 
-        while number > 0:
-            if number % 5 ==0:
-                fives +=1
-                number = number/5
+        while number > 0: # loops while n is greater than 0.
+            if number % 5 ==0: 
+                fives +=1 
+                number = number/5 
             else:
                 break
     return fives
 
-print(trailingZeros(45))
+print(trailingZeros(45)) #prints function.
