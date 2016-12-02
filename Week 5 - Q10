@@ -1,9 +1,9 @@
 def maxSubSequence(inputList): # function name.
     number = 0
-    tempList = []    
+    tempList = []    # variable declarations.
     finalList = []
     
-    for i in range(len(inputList)-1):
+    for i in range(len(inputList)-1):  # compares each element to previous, allows to work out length of sequence.
         if i == 0:
             tempList.append(inputList[i])
             
@@ -19,7 +19,7 @@ def maxSubSequence(inputList): # function name.
                 
     finalList.append(tempList)# adds integer to the final list.
 
-    for i in range(len(finalList)):
+    for i in range(len(finalList)): # this loop tests which sub sequence is of the greatest length.
         if i == 0:
             number = len(finalList[i])
             inputList = finalList[i]
@@ -31,4 +31,4 @@ def maxSubSequence(inputList): # function name.
 
 inputList = [1,2,3,4,1,5,1,6,7]
     
-print(maxSubSequence(inputList)) # prints the function.
+print(maxSubSequence(inputList)) # tests function, and prints the function.
