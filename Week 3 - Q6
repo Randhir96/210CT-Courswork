@@ -1,0 +1,9 @@
+def reverseWords(input):
+    inputLength = len(input)
+    if inputLength == 1:
+         return input
+    return [input[-1]] + reverseWords(input[:-1])
+ 
+inputList = ["this", "is", "awesome"]
+
+print(reverseWords(inputList))
