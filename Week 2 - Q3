@@ -1,0 +1,12 @@
+import math
+
+def highestPerfectSquare(n):
+    if n >= 0:
+        
+        number = math.sqrt(n)
+        number = int(number)
+        print(number)
+    else:
+        return False
+
+print(perfectSquare(12))
