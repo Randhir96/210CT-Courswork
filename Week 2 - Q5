@@ -1,24 +1,24 @@
 MATRIX
 
     MATRIX_ADDITION[M1,M2]
-        NEW_MATRIX = [[0,0],[0,0]]
-        FOR i IN RANGE[LENGTH[M1]]
+        NEW_MATRIX <-- ((0,0),(0,0))
+        FOR i IN RANGE(LENGTH(M1))
             FOR j IN RANGE(LENGTH(M2))
-                NEW_MATRIX = M1 + M2
+                NEW_MATRIX <-- M1 + M2
         RETURN NEW_MATRIX
 
     MATRIX_SUBTRACTION[M1,M2]
-        NEW_MATRIX = [[0,0],[0,0]]
-        FOR i IN RANGE [LENGTH[M1]]
-            FOR j IN RANGE[LENGTH[M2]]
-                NEW_MATRIX = M1 - M2
+        NEW_MATRIX <-- ((0,0],[0,0))
+        FOR i IN RANGE (LENGTH(M1))
+            FOR j IN RANGE(LENGTH(M2))
+                NEW_MATRIX <-- M1 - M2
         RETURN NEW_MATRIX
 
     MATRIX_MULTIPLY[M1,M2]
-        NEW_MATRIX = [[0,0],[0,0]]
-        FOR i IN RANGE[LENGTH[M1]]:
-            FOR j IN RANGE[LENGTH[M2]]:
-                NEW_MATRIX = M1 * M2
+        NEW_MATRIX <-- ((0,0),(0,0))
+        FOR i IN RANGE(LENGTH(M1)):
+            FOR j IN RANGE(LENGTH(M2)):
+                NEW_MATRIX <-- M1 * M2
         RETURN NEW_MATRIX
 
 MATRIX_1 = [5,6], [3,5]
