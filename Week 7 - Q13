@@ -1,0 +1,43 @@
+class node:
+    def __init__(self,value): 
+        self.node = node
+        self.adjacent = {}
+
+    def addAdjacent(self, adjacent_node): # adds an adjacent node.
+        self.adjacent[adjacent_node] = adjacent_node
+        
+class unweightedGraph: # creates graph.
+    def __init__(self):  
+     self.vertices = {}
+
+    def addVertex(self,value): # add vertex to existing graph.
+        vertex = node(value)
+        self.vertices[value] = vertex
+        print("New vertex created " + str(value)) # prints vertex created along with vertex name.
+        
+    def addEdge(self, vertex, adjacent_node):
+        self.vertices[vertex].addAdjacent(self.vertices[adjacent_node]) # adds an adjacent vertex to its connected vertex.
+        self.vertices[adjacent_node].addAdjacent(self.vertices[vertex])
+
+    def constructGraph(self): # prints the graph.
+        List = []
+        for item in self.vertices:
+            List.append(item)
+        for item in List:
+
+            print(str(item))
+
+graph = unweightedGraph()
+
+graph.addVertex(1) # appends vertices to graph.
+graph.addVertex(2)
+graph.addVertex(3)
+graph.addVertex(4)
+graph.addVertex(5)
+
+graph.addEdge(1,2)
+graph.addEdge(2,3)
+graph.addEdge(3,4)
+graph.addEdge(4,5)
+
+graph.constructGraph() # call the constructGraph function.
