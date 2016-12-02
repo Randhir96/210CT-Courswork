@@ -1,9 +1,9 @@
-def reverseWords(input):
-    inputLength = len(input)
+def reverseWords(input): # function defined with 1 argument.
+    inputLength = len(input) 
     if inputLength == 1:
          return input
     return [input[-1]] + reverseWords(input[:-1])
  
-inputList = ["this", "is", "awesome"]
+inputList = ["this", "is", "awesome"] # array containing words.
 
-print(reverseWords(inputList))
+print(reverseWords(inputList)) # prints function.
